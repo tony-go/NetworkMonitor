@@ -6,36 +6,47 @@
 //
 
 import Foundation
-
 import OSLog
 
-extension Logger {
-    /// Using your bundle identifier is a great way to ensure a unique identifier.
-    private static var subsystem = "com.tonygo.NetworkMonitorAgent"
-
-    /// Logs the view cycles like a view that appeared.
-    static let normal = Logger(subsystem: subsystem, category: "normal")
-}
-
-@objc protocol NetworkMonitorXPCProtocol {
-    func getNetworkStatus(reply: @escaping (Bool) -> Void)
-}
-
-class NetworkMonitorXPCService: NSObject, NetworkMonitorXPCProtocol {
+class NetworkMonitorXPCService: NSObject, NetworkMonitorXPCProtocol, NSXPCListenerDelegate {
     func getNetworkStatus(reply: @escaping (Bool) -> Void) {
         // Implement your logic to determine the network status
         let networkStatus: Bool = true
         reply(networkStatus)
     }
+    
+    /// This method is where the NSXPCListener configures, accepts, and resumes a new incoming NSXPCConnection.
+    func listener(_ listener: NSXPCListener, shouldAcceptNewConnection newConnection: NSXPCConnection) -> Bool {
+        Logger.agent.debug("In listener")
+        
+        // Configure the connection.
+        // First, set the interface that the exported object implements.
+        newConnection.exportedInterface = NSXPCInterface(with: NetworkMonitorXPCProtocol.self)
+        
+        Logger.agent.debug("After Exported Interface")
+        
+        // Next, set the object that the connection exports. All messages sent on the connection to this service will be sent to the exported object to handle. The connection retains the exported object.
+        newConnection.exportedObject = self
+        
+        Logger.agent.debug("After Exported Object")
+        
+        // Resuming the connection allows the system to deliver more incoming messages.
+        newConnection.resume()
+        
+        Logger.agent.debug("After Exported Resume")
+        
+        // Returning true from this method tells the system that you have accepted this connection. If you want to reject the connection for some reason, call invalidate() on the connection and return false.
+        return true
+    }
 }
 
-Logger.normal.info("Start agent")
+Logger.agent.info("Start agent")
 
 let delegate = NetworkMonitorXPCService()
-let listener = NSXPCListener.init(machServiceName: "com.tonygo.NetworkMonitorAgent")
-listener.delegate = delegate as? any NSXPCListenerDelegate
+let listener = NSXPCListener.init(machServiceName: MACH_SERVICE_NAME)
+listener.delegate = delegate
 listener.resume()
 
-Logger.normal.info("Agent started")
+Logger.agent.info("Agent started")
 
 RunLoop.main.run()

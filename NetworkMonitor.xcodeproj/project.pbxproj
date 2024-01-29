@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		EBA65C092B5FBDC2003F3890 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA65C082B5FBDC2003F3890 /* main.swift */; };
+		EBA65C162B624D80003F3890 /* NetworkMonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA65C152B624D80003F3890 /* NetworkMonitorApp.swift */; };
+		EBA65C182B624D80003F3890 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA65C172B624D80003F3890 /* ContentView.swift */; };
+		EBA65C1A2B624D83003F3890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA65C192B624D83003F3890 /* Assets.xcassets */; };
+		EBA65C1D2B624D83003F3890 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA65C1C2B624D83003F3890 /* Preview Assets.xcassets */; };
+		EBA65C242B624E68003F3890 /* NetworkMonitorXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA65C232B624E68003F3890 /* NetworkMonitorXPCProtocol.swift */; };
+		EBA65C252B624E68003F3890 /* NetworkMonitorXPCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA65C232B624E68003F3890 /* NetworkMonitorXPCProtocol.swift */; };
+		EBA65C272B624ED6003F3890 /* CustomLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA65C262B624ED6003F3890 /* CustomLogger.swift */; };
+		EBA65C282B624ED6003F3890 /* CustomLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA65C262B624ED6003F3890 /* CustomLogger.swift */; };
+		EBA65C2A2B6258C4003F3890 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA65C292B6258C4003F3890 /* Constants.swift */; };
+		EBA65C2B2B6258C4003F3890 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA65C292B6258C4003F3890 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +35,27 @@
 /* Begin PBXFileReference section */
 		EBA65C052B5FBDC2003F3890 /* NetworkMonitor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NetworkMonitor; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA65C082B5FBDC2003F3890 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		EBA65C132B624D80003F3890 /* NetworkMonitorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkMonitorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBA65C152B624D80003F3890 /* NetworkMonitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitorApp.swift; sourceTree = "<group>"; };
+		EBA65C172B624D80003F3890 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EBA65C192B624D83003F3890 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EBA65C1C2B624D83003F3890 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EBA65C1E2B624D83003F3890 /* NetworkMonitorApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetworkMonitorApp.entitlements; sourceTree = "<group>"; };
+		EBA65C232B624E68003F3890 /* NetworkMonitorXPCProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitorXPCProtocol.swift; sourceTree = "<group>"; };
+		EBA65C262B624ED6003F3890 /* CustomLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLogger.swift; sourceTree = "<group>"; };
+		EBA65C292B6258C4003F3890 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EBA65C2D2B6451F1003F3890 /* NetworkMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetworkMonitor.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EBA65C022B5FBDC2003F3890 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBA65C102B624D80003F3890 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +68,9 @@
 		EBA65BFC2B5FBDC2003F3890 = {
 			isa = PBXGroup;
 			children = (
+				EBA65C222B624DF7003F3890 /* Shared */,
 				EBA65C072B5FBDC2003F3890 /* NetworkMonitor */,
+				EBA65C142B624D80003F3890 /* NetworkMonitorApp */,
 				EBA65C062B5FBDC2003F3890 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				EBA65C052B5FBDC2003F3890 /* NetworkMonitor */,
+				EBA65C132B624D80003F3890 /* NetworkMonitorApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +88,39 @@
 			isa = PBXGroup;
 			children = (
 				EBA65C082B5FBDC2003F3890 /* main.swift */,
+				EBA65C2D2B6451F1003F3890 /* NetworkMonitor.entitlements */,
 			);
 			path = NetworkMonitor;
+			sourceTree = "<group>";
+		};
+		EBA65C142B624D80003F3890 /* NetworkMonitorApp */ = {
+			isa = PBXGroup;
+			children = (
+				EBA65C152B624D80003F3890 /* NetworkMonitorApp.swift */,
+				EBA65C172B624D80003F3890 /* ContentView.swift */,
+				EBA65C192B624D83003F3890 /* Assets.xcassets */,
+				EBA65C1E2B624D83003F3890 /* NetworkMonitorApp.entitlements */,
+				EBA65C1B2B624D83003F3890 /* Preview Content */,
+			);
+			path = NetworkMonitorApp;
+			sourceTree = "<group>";
+		};
+		EBA65C1B2B624D83003F3890 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EBA65C1C2B624D83003F3890 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EBA65C222B624DF7003F3890 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				EBA65C232B624E68003F3890 /* NetworkMonitorXPCProtocol.swift */,
+				EBA65C262B624ED6003F3890 /* CustomLogger.swift */,
+				EBA65C292B6258C4003F3890 /* Constants.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +143,23 @@
 			productReference = EBA65C052B5FBDC2003F3890 /* NetworkMonitor */;
 			productType = "com.apple.product-type.tool";
 		};
+		EBA65C122B624D80003F3890 /* NetworkMonitorApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBA65C1F2B624D83003F3890 /* Build configuration list for PBXNativeTarget "NetworkMonitorApp" */;
+			buildPhases = (
+				EBA65C0F2B624D80003F3890 /* Sources */,
+				EBA65C102B624D80003F3890 /* Frameworks */,
+				EBA65C112B624D80003F3890 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkMonitorApp;
+			productName = NetworkMonitorApp;
+			productReference = EBA65C132B624D80003F3890 /* NetworkMonitorApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +171,9 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					EBA65C042B5FBDC2003F3890 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					EBA65C122B624D80003F3890 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
@@ -111,9 +192,22 @@
 			projectRoot = "";
 			targets = (
 				EBA65C042B5FBDC2003F3890 /* NetworkMonitor */,
+				EBA65C122B624D80003F3890 /* NetworkMonitorApp */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBA65C112B624D80003F3890 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBA65C1D2B624D83003F3890 /* Preview Assets.xcassets in Resources */,
+				EBA65C1A2B624D83003F3890 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EBA65C012B5FBDC2003F3890 /* Sources */ = {
@@ -121,6 +215,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBA65C092B5FBDC2003F3890 /* main.swift in Sources */,
+				EBA65C272B624ED6003F3890 /* CustomLogger.swift in Sources */,
+				EBA65C242B624E68003F3890 /* NetworkMonitorXPCProtocol.swift in Sources */,
+				EBA65C2A2B6258C4003F3890 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBA65C0F2B624D80003F3890 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBA65C2B2B6258C4003F3890 /* Constants.swift in Sources */,
+				EBA65C182B624D80003F3890 /* ContentView.swift in Sources */,
+				EBA65C252B624E68003F3890 /* NetworkMonitorXPCProtocol.swift in Sources */,
+				EBA65C162B624D80003F3890 /* NetworkMonitorApp.swift in Sources */,
+				EBA65C282B624ED6003F3890 /* CustomLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +355,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W4MF6H9XZ6;
 				ENABLE_HARDENED_RUNTIME = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tonygo.NetworkMonitorAgent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonygo.NetworkMonitorApp.xpc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -258,8 +367,64 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W4MF6H9XZ6;
 				ENABLE_HARDENED_RUNTIME = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tonygo.NetworkMonitorAgent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonygo.NetworkMonitorApp.xpc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		EBA65C202B624D83003F3890 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NetworkMonitorApp/NetworkMonitorApp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NetworkMonitorApp/Preview Content\"";
+				DEVELOPMENT_TEAM = W4MF6H9XZ6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonygo.NetworkMonitorApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EBA65C212B624D83003F3890 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NetworkMonitorApp/NetworkMonitorApp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NetworkMonitorApp/Preview Content\"";
+				DEVELOPMENT_TEAM = W4MF6H9XZ6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonygo.NetworkMonitorApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -281,6 +446,15 @@
 			buildConfigurations = (
 				EBA65C0D2B5FBDC2003F3890 /* Debug */,
 				EBA65C0E2B5FBDC2003F3890 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBA65C1F2B624D83003F3890 /* Build configuration list for PBXNativeTarget "NetworkMonitorApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBA65C202B624D83003F3890 /* Debug */,
+				EBA65C212B624D83003F3890 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
