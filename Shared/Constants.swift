@@ -7,4 +7,4 @@
 
 import Foundation
 
-let MACH_SERVICE_NAME = "W4MF6H9XZ6.com.tonygo.NetworkMonitorApp.xpc"
+let MACH_SERVICE_NAME = "W4MF6H9XZ6.com.tonygo.NetworkMonitorApp.group.agent"
