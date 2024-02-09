@@ -355,7 +355,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W4MF6H9XZ6;
 				ENABLE_HARDENED_RUNTIME = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tonygo.NetworkMonitorApp.xpc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonygo.NetworkMonitorAgent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -367,7 +367,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W4MF6H9XZ6;
 				ENABLE_HARDENED_RUNTIME = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tonygo.NetworkMonitorApp.xpc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonygo.NetworkMonitorAgent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
