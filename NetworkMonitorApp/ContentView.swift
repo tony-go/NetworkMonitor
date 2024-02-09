@@ -7,12 +7,23 @@
 
 import SwiftUI
 import Foundation
+import ServiceManagement
 
 class NetworkMonitorXPCClient: NetworkMonitorXPCProtocol {
 
     private let connection: NSXPCConnection
 
     init() {
+        let service = SMAppService.agent(plistName: "com.tonygo.NetworkMonitorAgent")
+
+        do {
+            try service.register()
+            print("Successfully registered \(service)")
+        } catch {
+            print("Unable to register \(error)")
+            exit(1)
+        }
+        
         // Initialize the XPC connection with the service's name
         connection = NSXPCConnection(machServiceName: MACH_SERVICE_NAME)
         connection.remoteObjectInterface = NSXPCInterface(with: NetworkMonitorXPCProtocol.self)

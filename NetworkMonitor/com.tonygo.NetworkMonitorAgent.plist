@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MachServices</key>
+	<dict>
+		<key>W4MF6H9XZ6.com.tonygo.NetworkMonitorApp.group.agent</key>
+		<true/>
+	</dict>
+	<key>KeepAlive</key>
+	<false/>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>Label</key>
+	<string>com.tonygo.NetworkMonitorAgent</string>
+	<key>BundleProgram</key>
+	<string>Contents/Resources/NetworkMonitor</string>
+</dict>
+</plist>
