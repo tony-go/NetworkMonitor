@@ -8,6 +8,11 @@
 import Foundation
 import OSLog
 
+// TODO
+// need to sign your agent with entitlements:
+// com.apple.security.app-sandbox to enable the sandbox.
+// com.apple.security.application-groups to facility XPC.
+
 class NetworkMonitorXPCService: NSObject, NetworkMonitorXPCProtocol, NSXPCListenerDelegate {
     func getNetworkStatus(reply: @escaping (Bool) -> Void) {
         // Implement your logic to determine the network status

@@ -14,14 +14,14 @@ class NetworkMonitorXPCClient: NetworkMonitorXPCProtocol {
     private let connection: NSXPCConnection
 
     init() {
-        let service = SMAppService.agent(plistName: "com.tonygo.NetworkMonitorAgent")
+        let service = SMAppService.agent(plistName: "com.tonygo.NetworkMonitorAgent.plist")
 
         do {
             try service.register()
             print("Successfully registered \(service)")
         } catch {
             print("Unable to register \(error)")
-            exit(1)
+            // exit(1)
         }
         
         // Initialize the XPC connection with the service's name

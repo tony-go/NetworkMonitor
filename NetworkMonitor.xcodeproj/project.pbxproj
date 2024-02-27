@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96043BBC2B8DE83D00F848D6 /* NetworkMonitor in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBA65C052B5FBDC2003F3890 /* NetworkMonitor */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		EB6579782B76888900C38DF5 /* com.tonygo.NetworkMonitorAgent.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB6579732B76728300C38DF5 /* com.tonygo.NetworkMonitorAgent.plist */; };
 		EB6579792B76895300C38DF5 /* NetworkMonitor in Resources */ = {isa = PBXBuildFile; fileRef = EBA65C052B5FBDC2003F3890 /* NetworkMonitor */; };
 		EBA65C092B5FBDC2003F3890 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA65C082B5FBDC2003F3890 /* main.swift */; };
@@ -23,6 +24,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		96043BBB2B8DE82300F848D6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/MacOS;
+			dstSubfolderSpec = 1;
+			files = (
+				96043BBC2B8DE83D00F848D6 /* NetworkMonitor in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EB6579772B76887E00C38DF5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -36,6 +47,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		96043BB92B8DE20200F848D6 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		96043BBA2B8DE30400F848D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB6579732B76728300C38DF5 /* com.tonygo.NetworkMonitorAgent.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = com.tonygo.NetworkMonitorAgent.plist; sourceTree = "<group>"; };
 		EBA65C052B5FBDC2003F3890 /* NetworkMonitor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NetworkMonitor; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA65C082B5FBDC2003F3890 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -94,6 +107,8 @@
 				EBA65C082B5FBDC2003F3890 /* main.swift */,
 				EB6579732B76728300C38DF5 /* com.tonygo.NetworkMonitorAgent.plist */,
 				EBA65C2D2B6451F1003F3890 /* NetworkMonitor.entitlements */,
+				96043BB92B8DE20200F848D6 /* Config.xcconfig */,
+				96043BBA2B8DE30400F848D6 /* Info.plist */,
 			);
 			path = NetworkMonitor;
 			sourceTree = "<group>";
@@ -155,6 +170,7 @@
 				EBA65C102B624D80003F3890 /* Frameworks */,
 				EBA65C112B624D80003F3890 /* Resources */,
 				EB6579772B76887E00C38DF5 /* CopyFiles */,
+				96043BBB2B8DE82300F848D6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -357,6 +373,7 @@
 		};
 		EBA65C0D2B5FBDC2003F3890 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96043BB92B8DE20200F848D6 /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W4MF6H9XZ6;
@@ -369,6 +386,7 @@
 		};
 		EBA65C0E2B5FBDC2003F3890 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96043BB92B8DE20200F848D6 /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W4MF6H9XZ6;
